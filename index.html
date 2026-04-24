@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Passeport Stage Complété - DataNovA</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.5; color: #333; max-width: 900px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; }
+        h1, h2, h3 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 5px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        th, td { border: 1px solid #bdc3c7; padding: 12px; text-align: left; }
+        th { background-color: #f8f9fa; color: #2c3e50; }
+        .sensible-high { color: #c0392b; font-weight: bold; }
+        .sensible-med { color: #d35400; font-weight: bold; }
+        .sensible-low { color: #27ae60; font-weight: bold; }
+        .ia-mention { font-style: italic; color: #7f8c8d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+
+    <h1>PARTIE 1 : ANALYSE DE L'ENTREPRISE DATANOVA</h1>
+    
+    <h3>1.1 - Tableau des données et risques</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Donnée traitée</th>
+                <th>Niveau de sensibilité</th>
+                <th>Justification</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Identité (Nom, Prénom, Date de naissance)</td>
+                <td class="sensible-low">Normale</td>
+                <td>Données pivot permettant l'identification du patient mais non critiques seules.</td>
+            </tr>
+            <tr>
+                <td>Numéro de Sécurité Sociale (NIR)</td>
+                <td class="sensible-high">Très sensible</td>
+                <td>Identifiant unique national ; son vol facilite l'usurpation d'identité.</td>
+            </tr>
+            <tr>
+                <td>Historique médical / Pathologies</td>
+                <td class="sensible-high">Trés sensible</td>
+                <td>Données de santé protégées par le secret médical (catégorie particulière RGPD).</td>
+            </tr>
+            <tr>
+                <td>Identifiants de connexion (Médecins/Secrétaires)</td>
+                <td class="sensible-med">Sensible</td>
+                <td>Une compromission permet un accès illégitime à l'ensemble des dossiers patients.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3>1.2 - Réglementations applicables</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Réglementation</th>
+                <th>Pourquoi elle s'applique</th>
+                <th>Ce qu'elle impose concrètement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>RGPD</strong> (Règlement Général sur la Protection des Données)</td>
+                <td>DataNovA traite des données personnelles de citoyens européens à grande échelle.</td>
+                <td>Tenue d'un registre de traitements, droit d'accès/rectification pour les patients, et sécurité accrue.</td>
+            </tr>
+            <tr>
+                <td><strong>HDS</strong> (Hébergement de Données de Santé)</td>
+                <td>L'entreprise héberge des données de santé critiques sur des serveurs OVH.</td>
+                <td>Nécessité de choisir un hébergeur certifié HDS et de mettre en place un chiffrement fort des bases.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h1>PARTIE 2 : TABLEAU DE COMPÉTENCES & PREUVES GITHUB</h1>
+    <p><em>Note : Les preuves ci-dessous sont des exemples types basés sur un cursus SIO SLAM.</em></p>
+    <table>
+        <thead>
+            <tr>
+                <th>Compétence Bloc 1</th>
+                <th>Ce que je sais faire concrètement</th>
+                <th>Preuve dans mon GitHub</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Gérer le patrimoine informatique</td>
+                <td>Utilisation de Git pour le versionnage : commits réguliers, gestion des branches et pull requests.</td>
+                <td>Repo: <code>projet-labo-flask</code> / Commit: "Initialise git structure"</td>
+            </tr>
+            <tr>
+                <td>Mettre à disposition un service</td>
+                <td>Configuration d'une application web Flask et exposition sur le réseau local (localhost).</td>
+                <td>Fichier: <code>app.py</code> dans le repo <code>mission-datanova</code></td>
+            </tr>
+            <tr>
+                <td>Répondre à un incident / demande</td>
+                <td>Utilisation du système de "Issues" sur GitHub pour tracer les bugs et documenter leur résolution.</td>
+                <td>GitHub Issues: Issue #4 "Fix 404 error on login route"</td>
+            </tr>
+            <tr>
+                <td>Travailler en mode projet</td>
+                <td>Organisation des tâches via un tableau Kanban (GitHub Projects) avec colonnes To Do / In Progress.</td>
+                <td>Project Board: <code>Developpement-Passeport-Stage</code></td>
+            </tr>
+            <tr>
+                <td>Organiser son développement pro</td>
+                <td>Rédaction d'une documentation technique claire dans le fichier README.md du projet.</td>
+                <td>Fichier: <code>README.md</code> (section Installation et Usage)</td>
+            </tr>
+            <tr>
+                <td>Respecter les règles d'utilisation</td>
+                <td>Gestion de la sécurité via <code>.gitignore</code> pour exclure les fichiers sensibles comme <code>.env</code>.</td>
+                <td>Fichier: <code>.gitignore</code> excluant <code>config.py</code> et <code>venv/</code></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h1>PARTIE 3 : LETTRE DE MOTIVATION TECHNIQUE</h1>
+    <p><strong>Objet : Candidature pour un stage de développeur full-stack</strong></p>
+    
+    <p>Madame, Monsieur,</p>
+    
+    <p>Actuellement en première année de <strong>BTS SIO option SLAM</strong>, je souhaite postuler pour un stage au sein de <strong>DataNovA</strong> afin de mettre mes compétences au service de votre plateforme de santé. Ce semestre, j'ai développé une solide maîtrise du framework <strong>Flask</strong> pour la création d'API ainsi que de l'outil <strong>Git</strong> pour le versionnage collaboratif.</p>
